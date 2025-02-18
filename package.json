@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node api.js && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/Nathanim1919/telegram-bot#readme",
   "dependencies": {
-    "dotenv": "^16.4.7",
     "node-cron": "^3.0.3",
     "node-telegram-bot-api": "^0.66.0"
   }
