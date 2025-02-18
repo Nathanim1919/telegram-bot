@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
 });
 
 // Bind to the PORT environment variable (provided by Render)
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
@@ -112,7 +112,10 @@ bot.on("message", (msg) => {
   // Allowed links (including subdomains)
   const allowedDomains = [
     /^https:\/\/(?:[a-zA-Z0-9-]+\.)*novaads\.tech/i, // Matches novaads.tech and its subdomains
-    /^https:\/\/t\.me\/nova_ethiopia/i, // Matches the specific Telegram group
+    /^https:\/\/t\.me\/nova_ethiopia/i, // Matches the specific Telegram group'
+    // lets add this also as allowed link: https://youtu.be/LVNSVIray3U
+    /^https:\/\/youtu\.be\/LVNSVIray3U/i // Matches the specific YouTube video which is look like https://youtu.be/LVNSVIray3U
+    
   ];
 
   // Check for links
